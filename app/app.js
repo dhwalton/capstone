@@ -5,7 +5,7 @@ var fadeSpeed = 250; // fade in/out speed
 var msgDisplayTime = 2000; // length of time that messages are displayed in ms
 var score = 0; // user score
 var maxDescriptionLength = 600; // max character limit for description (for proper formatting)
-var debug = true;
+var debug = false;
 
 // holds product data, runs ajax query
 var product = {
