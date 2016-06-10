@@ -5,7 +5,7 @@ var fadeSpeed = 250; // fade in/out speed
 var msgDisplayTime = 2000; // length of time that messages are displayed in ms
 var score = 0; // user score
 var maxDescriptionLength = 600; // max character limit for description (for proper formatting)
-var debug = false;
+var debug = true;
 
 // holds product data, runs ajax query
 var product = {
@@ -130,7 +130,7 @@ function newGame() {
 	// data validation thing
 	if (debug == true) {
 		for (var i=0; i<maxProducts; i++) {
-			product.productKeywords[i] = 'mug';
+			product.productKeywords[i] = 'fat tire bikes';
 		}
 	}
 
@@ -188,7 +188,7 @@ function guessResult(guess) {
 	else if (difference >= 1 && difference <= 3) {
 		guessMessage = "Too low, but so close!";
 	}
-	else if (difference >= 3 && difference < 99) {
+	else if (difference >= 3 && difference <= 99) {
 		guessMessage = "Too low!";
 	}
 	else if (difference >= 100 && difference < 999) {
