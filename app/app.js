@@ -294,5 +294,10 @@ $(document).ready( function() {
 		runGuess();		
 	});
 
+	$('#guess').find('input').keypress(function(e){
+		//e.preventDefault();
+		if (e.keyCode == 13) runGuess();		
+	});
+
 
 });
