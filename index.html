@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>How Much is It?</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header id="masthead">
+		<h1>How Much is It?</h1>
+	</header>
+	<section id="main">
+		<div id="container">
+			<div id="score">
+				<span id="score-display">Score:</span>
+				<span id="tries"></span>
+			</div>
+			&nbsp;
+			<div id="prompt">
+				<img src="http://i5.walmartimages.com/dfw/dce07b8c-aede/k2-_4ddbb8ba-fc6b-469d-a8a4-9219a6de8684.v4.jpg" />
+				<h3>This is the product!</h3>
+				<p>This is the product Description!</p>
+			</div>
+			<div id="new-game"><button>Start New Game</button></div>
+			<div id="debug"><input type="text"><button>TEST</button></div>
+			<div id="guess">
+				<ul>
+					<li>Enter your guess in whole dollars: $ <input type="text" /><button>Guess</button></li>
+					<li><span id="last-guess"></span></li>
+				</ul>
+			</div>
+			<div id="result"><h1>Game Over!</h1><p>This is some text</p></div>
+			<div id="incorrect-answer"><h1>WRONG!</h1><p>The correct price was $0</p></div>
+			<div id="correct-answer"><h1>CORRECT!</h1></div>
+		</div>
+	</section>
+	<footer id="credits">
+		by Donny
+	</footer>
+	<audio id="correct-sound" src="sounds/tada.mp3" />
+	<audio id="incorrect-sound" src="sounds/horns.mp3" />
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/keywords.js"></script>
+	<script src="app/numeric-min.js"></script>
+</body>
+</html>

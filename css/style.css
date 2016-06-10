@@ -1,0 +1,227 @@
+/* ---------------------- Global ---------------------- */
+body {
+  background-color: #eee;
+  color: #333;
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  color: #00f;
+  font-size: 5em;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* ---------------------- Header ---------------------- */
+#masthead {
+  margin: 0;
+}
+
+
+/* ---------------------- Main Container ---------------------- */
+#container {
+  background-image:url(../images/bg.svg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1280px;
+  height: 40em;
+  /* box-shadow: inset 0px 0px 8em #000; */
+  position: relative;
+  margin: 0 auto;
+  /* display:none;*/
+}
+
+
+/* ---------------------- Score and Game Progress Indicators ----------------------*/
+#score {
+  background-color: rgba(255,255,255,0.85);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  padding: 1.5em;
+  display: none;
+  font-weight: 600;
+}
+
+#score img {
+  height: 50px;
+  width: 75px;
+}
+
+#score-title {
+  float:left;
+  margin-left: 3em;
+  margin-top: 1em;
+}
+
+#progress {
+  float:right;
+  margin-top: 1em;
+  margin-right: 6em;
+}
+
+#tries {
+    float: right;
+    margin-right: 3em;
+}
+
+/* ---------------------- Question Prompt ---------------------- */
+#prompt {
+  background-color: rgba(255,255,255,0.85);
+  min-height: 16em;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 0.5em;
+  margin-top: 5em;
+  box-shadow: 0px 0px 3em #000;
+  text-align: center;
+  display: none;
+}
+
+#prompt p {
+  color: #000;
+  font-size: 1.2em;
+  margin: 0 1.5em;
+  padding: 1.5em;
+
+}
+
+#prompt p li {
+  display: inline;
+  margin-right: 1em;
+}
+
+#prompt h3 {
+  font-size: 2em;
+  margin: 1.5em 1.5em 0 1.5em;
+  padding: 1.5em 1.5em 0 1.5em;
+
+}
+
+#prompt img {
+  float:left;
+  margin: 2em;
+}
+
+#prompt br, #prompt p>p {
+  display: none;
+}
+
+/* ---------------------- New Game/Answer Divs, Buttons, Input ---------------------- */
+#new-game, #guess, #debug {
+  text-align: center;
+  background-color: rgba(0,0,0,0.45);
+  padding: 1.5em 0;
+  border: none;
+  height: 3em;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+}
+
+#new-game button, #guess button {
+  padding: 0 0.85em;
+  margin: 0.25em;
+  border-radius: 0.25em;
+  background-color: #00f;
+  color: #fff;
+  border: none;
+  height: 40px;
+}
+
+#new-game button:focus, #guess button:focus {
+  outline:none;
+}
+
+#new-game button:hover, #guess button:hover {
+  background-color: #009;
+}
+
+#new-game {
+  z-index: 999;
+}
+
+#guess, #debug {
+  display: none;
+}
+
+#guess input {
+  height: 35px;
+  width: 3em;
+  color: #000;
+}
+
+#guess ul {
+  padding: 0;
+  margin: 0;
+}
+
+#guess ul li {
+  display: table-cell;
+  width: 40%;
+}
+
+/* ---------------------- Correct / Incorrect Answers, End Game ---------------------- */
+#incorrect-answer, #correct-answer, #end-game, #result {
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  height: 40em;
+  top: 0px;
+  left: 0px;
+  display: none;
+  z-index: 10;
+}
+
+#incorrect-answer h1, #correct-answer h1, #result h1 {
+  letter-spacing: 0.15em;
+  
+}
+
+#correct-answer {
+  /*background-image: url(../images/groovy.jpg);*/
+}
+
+#correct-answer h1, #correct h1 {
+  color: rgba(50,155,50,1);
+  font-size: 12em;
+  margin: 15% auto;
+}
+
+#incorrect-answer {
+   /*background-image: url(../images/it.jpg);*/
+}
+
+#incorrect-answer h1, #incorrect h1 {
+  color: rgba(255,50,50,1);
+  font-size: 14em;
+  margin: 5% 0 0 0;
+}
+
+#result h1 {
+  margin-bottom: auto;
+  margin-top: 15%;
+}
+
+#incorrect-answer p, #result p {
+  text-align: center;
+  font-size: 3em;
+}
+
+/* ---------------------- Footer ---------------------- */
+#credits {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
