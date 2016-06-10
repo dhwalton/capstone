@@ -5,6 +5,7 @@ var fadeSpeed = 250; // fade in/out speed
 var msgDisplayTime = 2000; // length of time that messages are displayed in ms
 var score = 0; // user score
 var maxDescriptionLength = 600; // max character limit for description (for proper formatting)
+var debug = false;
 
 // holds product data, runs ajax query
 var product = {
@@ -71,7 +72,7 @@ var product = {
 			// look for the primary image, which apparently can be any of the array elements...
 			for (var i=0; i<result.items[0].imageEntities.length; i++) {
 				if (result.items[0].imageEntities[i].entityType == "PRIMARY") {
-					product.currentImage = result.items[0].imageEntities[i].mediumImage;
+					if (result.items[0].imageEntities[i].mediumImage != undefined) product.currentImage = result.items[0].imageEntities[i].mediumImage;
 					console.log('image entry ' + i + ' is the primary');
 				}
 			}
@@ -125,6 +126,13 @@ function newGame() {
 
 	//load the keywords for this game
 	product.productKeywords = keywords.randomList(maxProducts);
+
+	// data validation thing
+	if (debug == true) {
+		for (var i=0; i<maxProducts; i++) {
+			product.productKeywords[i] = 'mug';
+		}
+	}
 
 	// reset score
 	tryCount = 0;
